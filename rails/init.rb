@@ -1,0 +1,1 @@
+require 'good_sort'

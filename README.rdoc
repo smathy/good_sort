@@ -1,7 +1,0 @@
-= good_sort
-
-Description goes here.
-
-== Copyright
-
-Copyright (c) 2009 Jason King. See LICENSE for details.
