@@ -1,7 +1,7 @@
 module GoodSort
   module WillPaginate
     def self.included(base)
-      base.send(:include, InstanceMethods)
+      base.send :include, InstanceMethods
       base.alias_method_chain :will_paginate, :good_sort
     end
 
