@@ -27,7 +27,7 @@ Then add it to your `config/environment.rb`:
 
 ### git submodule
 
-    $ git submodule add git://github.com/JasonKing/good_sort.git vendor/plugins/good_sort
+    git submodule add git://github.com/JasonKing/good_sort.git vendor/plugins/good_sort
 
 Usage
 -----
