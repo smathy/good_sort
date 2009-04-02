@@ -114,7 +114,7 @@ There's also no requirement to cram it all in on one line, you can have multiple
 This produces a `:order` hash suitable to be merged into your `Model.find` (or
 `Model.paginate`) parameters based on the `:field` and `:down` input parameters.
 
-### ActionView::Base#sort\_headers\_for( model\_name, header\_array, options = {} )
+### ActionView::Base#sort\_headers\_for( model\_name, header\_array, options = {}, &block )
 
 With no options, this will create `<th>` elements for each element of the
 header_array, they will be given an id which, for the `name` field of our
@@ -142,3 +142,7 @@ follows:
  * **:html** - Options pass to the `link\_to\_remote` as the third argument, see the docs for `link\_to\_remote` for these, defaults below:
   * **:title** - Defaults to "Sort by #{sort\_field\_tag}".  If you embed the sort\_field\_tag attribute in your string then that will be replaced with the field\_name.titlize for you, eg: :title => "Order by #{sort\_field\_tag}"  If you want anything fancier then you can override `sort\_header\_title` and do whatever you want.
   * **:html** - No point in setting this, it is overridden with the link URL.
+
+Finally, if you pass a block, then it will be yielded to for each field in your
+header\_array, and you can provide different text to be displayed for as many of
+the headings as you like.
