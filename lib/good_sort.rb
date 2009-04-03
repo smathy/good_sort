@@ -6,11 +6,6 @@ module GoodSort
 
       require 'good_sort/sorter'
       ActiveRecord::Base.send :extend, Sorter
-
-      if ActionView::Base.instance_methods.include? 'will_paginate'
-        require 'good_sort/will_paginate'
-        ActionView::Base.send :include, WillPaginate
-      end
     end
   end
 end
