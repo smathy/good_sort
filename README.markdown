@@ -3,9 +3,7 @@ Good Sort
 
 Hate not having _the right way_&trade; to do column sorting in list (collection)
 views?  Well, fear not my dear friend, for good_sort has arrived.  Does Ajax for
-those with JS and regular links for those without.  Also, as long as you load it
-after will_paginate, it will sniff it out and make the will_paginate view helper
-do the right thing with your sorted collection.
+those with JS and regular links for those without.
 
 Installation
 ------------
