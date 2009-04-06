@@ -2,8 +2,11 @@ Good Sort
 =========
 
 Hate not having _the right way_&trade; to do column sorting in list (collection)
-views?  Well, fear not my dear friend, for good_sort has arrived.  Does Ajax for
-those with JS and regular links for those without.
+views?  Well, fear not my dear friend, for good_sort has arrived.
+
+It does Ajax for those with JS and regular links for those without.
+
+It _just works_&trade; with `will_paginate`?
 
 Installation
 ------------
@@ -144,3 +147,10 @@ follows:
 Finally, if you pass a block, then it will be yielded to for each field in your
 header\_array, and you can provide different text to be displayed for as many of
 the headings as you like.
+
+As long as you require `good_sort` after you've required `will_paginate` then
+`good_sort` will override the `will_paginate` view helper to inject the params
+needed to ensure that the page links will all know about the sorting column.
+The only caveat is that the call to `will_paginate` needs to be **within** the
+partial that is rendered by the AJAX call so that it is re-rendered when you
+sort.
