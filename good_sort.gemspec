@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.date = %q{2009-04-02}
   s.email = %q{jk@silentcow.com}
   s.extra_rdoc_files = ["README.markdown", "LICENSE"]
-  s.files = ["README.markdown", "VERSION.yml", "lib/good_sort", "lib/good_sort/sorter.rb", "lib/good_sort/view_helpers.rb", "lib/good_sort/will_paginate.rb", "lib/good_sort.rb", "test/good_sort_test.rb", "test/good_sort_view.rb", "test/test_helper.rb", "LICENSE"]
+  s.files = ["README.markdown", "VERSION.yml", "lib/good_sort", "lib/good_sort/sorter.rb", "lib/good_sort/view_helpers.rb", "lib/good_sort/will_paginate.rb", "lib/good_sort.rb", "test/sorter_test.rb", "test/view_helpers_test.rb", "test/test_helper.rb", "LICENSE"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/JasonKing/good_sort}
   s.rdoc_options = ["--inline-source", "--charset=UTF-8"]
