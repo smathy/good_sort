@@ -12,3 +12,18 @@ module GoodSort
     end
   end
 end
+
+class RemoteLinkRenderer < WillPaginate::LinkRenderer
+  def prepare(collection, options, template)
+    @remote = options.delete(:remote) || {}
+    super
+  end
+
+  protected
+  def page_link(page, text, attributes = {})
+    _url = url_for(page)
+    @template.link_to_remote(text, {:url => _url, :method => :get}.merge(@remote), { :href => _url })
+  end
+end
+
+WillPaginate::ViewHelpers.pagination_options[:renderer] = 'RemoteLinkRenderer'
