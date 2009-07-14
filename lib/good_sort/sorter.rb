@@ -28,10 +28,16 @@ module GoodSort
         if f.is_a? Hash
           f.each do |k,v|
             ass = association_for( k )
-            unless ass_has_attr( ass, v )
-              raise ArgumentError, "belongs_to association #{k} does not have specified column #{v}"
+            if v.is_a? String
+              # if we're supplied a string, then assume they know what they're
+              # doing and just string it up
+              sort_fields[k.to_sym] = { :order => v, :joins => k.to_sym }
+            else
+              unless ass_has_attr( ass, v )
+                raise ArgumentError, "belongs_to association #{k} does not have specified column #{v}"
+              end
+              sort_fields[k.to_sym] = { :order => ass_to_table(ass) + '.' + v.to_s, :joins => k.to_sym }
             end
-            sort_fields[k.to_sym] = { :order => ass_to_table(ass) + '.' + v.to_s, :joins => k.to_sym }
           end
           next
         end
