@@ -107,6 +107,13 @@ just specify it using key => value style params, like so:
       sort_on :name, :updated_at, :state => :long_name
     end
 
+If you're confident that you know what you're doing, then you can also specify a string for the value of the associated attribute, in which case `good_sort` will just trust you and use this as the `ORDER BY` clause.  Make sure you qualify your field names with the join table name if there's any ambiguity.  Like so:
+
+    class Author < ActiveRecord::Base
+      belongs_to :state
+      sort_on :name, :updated_at, :state => "COALESCE( states.long_name, states.short_name, '' )"
+    end
+
 There's also no requirement to cram it all in on one line, you can have multiple
 `sort_on` declarations, and they will just be accumulated.
 
