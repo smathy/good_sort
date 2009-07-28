@@ -53,7 +53,7 @@ module GoodSort
       ass.klass.column_names.find{|e|e==v.to_s}
     end
     def ass_to_table(ass)
-      ass.class_name.tableize
+      ass.quoted_table_name
     end
   end
 end
