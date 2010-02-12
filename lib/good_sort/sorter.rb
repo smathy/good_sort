@@ -1,6 +1,6 @@
 module GoodSort
   module Sorter
-    def sort_fields; @@sort_fields ||= {}; end
+    def sort_fields; @sort_fields ||= {}; end
     def sort_by(p)
       return unless p && p[:field] && p[:down]
       f = p[:field]
