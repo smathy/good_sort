@@ -17,7 +17,7 @@ module GoodSort
 
         if f.is_a? String or f.is_a? Symbol
           if self.columns_hash[f.to_s]
-            sort_fields[f.to_sym] = { :order => f.to_s }
+            sort_fields[f.to_sym] = { :order => quoted_table_name + '.' + f.to_s }
             next
           else
             # if it's not one of ours, we'll see if it's an association

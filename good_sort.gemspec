@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{good_sort}
-  s.version = "0.2.1"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jason King"]
-  s.date = %q{2009-04-02}
+  s.date = %q{2010-02-12}
   s.email = %q{jk@silentcow.com}
   s.extra_rdoc_files = ["README.markdown", "LICENSE"]
   s.files = ["README.markdown", "VERSION.yml", "lib/good_sort", "lib/good_sort/sorter.rb", "lib/good_sort/view_helpers.rb", "lib/good_sort/will_paginate.rb", "lib/good_sort.rb", "test/sorter_test.rb", "test/view_helpers_test.rb", "test/test_helper.rb", "LICENSE"]
